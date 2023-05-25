@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Comfortaa:wght@700&family=Source+Code+Pro:ital,wght@0,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Comfortaa:wght@700&family=Patrick+Hand&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+#bgOverlayParent {
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    display: grid;
+    place-items: center;
+    background-color: rgba(40, 37, 39, 0.9);
+}
+
+#bgOverlayChild {
+    width: 800px;
+    height: 800px;
+    z-index: 99;
+    display: grid;
+    place-items: center;
+}
+
+#bgOverlayChild i {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 576px) {
+    #bgOverlayChild {
+        width: 400px;
+        height: 400px;
+    }
+
+    #bgOverlayChild i {
+        font-size: 30px;
+    }
+}
+
+.light_icon {
+    color: lightsalmon;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px lightsalmon, 0 0 30px lightsalmon, 0 0 40px lightsalmon;
+}
+
+.dark_icon {
+    color: cyan;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+}
+
+
+@keyframes dark_animation {
+    from {
+        transform: rotate(360deg)
+    }
+
+    to {
+        transform: rotate(900deg)
+    }
+}
+
+@keyframes light_animation {
+    from {
+        transform: rotate(900deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.blur {
+    filter: blur(40px);
+}
+
+.navbar {
+    background-color: #2F3C7E !important;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.navlink_color {
+    color: darkgoldenrod;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: whitesmoke;
+    transition: all 300ms ease-in-out;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.form-switch {
+    position: absolute;
+    top: 5px;
+    right: 80px;
+}
+
+.light_mode i {
+    color: lightsalmon;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px lightsalmon, 0 0 30px lightsalmon, 0 0 40px lightsalmon;
+}
+
+.dark_mode i {
+    color: cyan;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+}
+
+#mode_text {
+    color: lightsalmon;
+    position: absolute;
+    top: 10px;
+    right: 140px;
+    letter-spacing: 3px;
+}
+
+
+#progress-bar {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: #00FF7F;
+}
+
+.content_hide {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1.2s ease-in-out;
+}
+
+.content_hide.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#home {
+    margin-top: 100px;
+}
+
+#profile_image {
+    width: 500px;
+    height: 500px;
+}
+
+@media only screen and (max-width: 576px) {
+    #profile_image {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.circle_chart {
+    width: 100px;
+    height: 100px;
+}
+
+#html_circle {
+    border: 4px solid #e34c26;
+}
+
+.html_progress {
+    background-color: #e34c26;
+    animation: html_out 1s normal linear forwards;
+}
+
+.html_progress_rev {
+    background-color: #e34c26;
+    animation: html_in 1s normal linear forwards;
+}
+
+@keyframes html_out {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes html_in {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#css_circle {
+    border: 4px solid #264de4;
+}
+
+.css_progress {
+    background-color: #264de4;
+    animation: css_out 1s normal linear forwards;
+}
+
+.css_progress_rev {
+    background-color: #264de4;
+    animation: css_in 1s normal linear forwards;
+}
+
+@keyframes css_out {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css_in {
+    0% {
+        width: 90%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#bootstrap_circle {
+    border: 4px solid #563d7c;
+}
+
+.bootstrap_progress {
+    background-color: #563d7c;
+    animation: bootstrap_out 1s normal linear forwards;
+}
+
+.bootstrap_progress_rev {
+    background-color: #563d7c;
+    animation: bootstrap_in 1s normal linear forwards;
+}
+
+@keyframes bootstrap_out {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes bootstrap_in {
+    0% {
+        width: 90%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#jquery_circle {
+    border: 4px solid #0769ad;
+}
+
+.jquery_progress {
+    background-color: #0769ad;
+    animation: jquery_out 1s normal linear forwards;
+}
+
+.jquery_progress_rev {
+    background-color: #0769ad;
+    animation: jquery_in 1s normal linear forwards;
+}
+
+@keyframes jquery_out {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes jquery_in {
+    0% {
+        width: 60%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#php_circle {
+    border: 4px solid #8993be;
+}
+
+.php_progress {
+    background-color: #8993be;
+    animation: php_out 1s normal linear forwards;
+}
+
+.php_progress_rev {
+    background-color: #8993be;
+    animation: php_in 1s normal linear forwards;
+}
+
+@keyframes php_out {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes php_in {
+    0% {
+        width: 70%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#mysql_circle {
+    border: 4px solid #F29111;
+}
+
+.mysql_progress {
+    background-color: #F29111;
+    animation: mysql_out 1s normal linear forwards;
+}
+
+.mysql_progress_rev {
+    background-color: #F29111;
+    animation: mysql_in 1s normal linear forwards;
+}
+
+@keyframes mysql_out {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes mysql_in {
+    0% {
+        width: 80%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#laravel_circle {
+    border: 4px solid #F05340;
+}
+
+.laravel_progress {
+    background-color: #F05340;
+    animation: laravel_out 1s normal linear forwards;
+}
+
+.laravel_progress_rev {
+    background-color: #F05340;
+    animation: laravel_in 1s normal linear forwards;
+}
+
+@keyframes laravel_out {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes laravel_in {
+    0% {
+        width: 60%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#java_circle {
+    border: 4px solid #5382a1;
+}
+
+.java_progress {
+    background-color: #5382a1;
+    animation: java_out 1s normal linear forwards;
+}
+
+.java_progress_rev {
+    background-color: #5382a1;
+    animation: java_in 1s normal linear forwards;
+}
+
+@keyframes java_out {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes java_in {
+    0% {
+        width: 70%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.project_div {
+    width: 70%;
+    height: 90%;
+    transition: all 400ms ease-in-out;
+}
+
+.project_div_parent:hover .project_div {
+    width: 100%;
+    height: 100%;
+}
+
+.project_img {
+    width: 100%;
+    height: 100%;
+}
+
+#contact_card_child {
+    width: 99%;
+    height: 98%;
+}
+
+#contact_card::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background-image: conic-gradient(darkblue, #FFD700);
+    z-index: -1;
+    animation: border_animation 4s infinite linear;
+}
+
+@keyframes border_animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#totop_div {
+    margin-top: 150px;
+}
+
+#up_to_top_btn {
+    position: absolute;
+    bottom: 50px;
+    right: -90px;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+#uptotop {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transition: all 1s ease-in-out;
+    font-size: 20px;
+}
+
+#up_to_top_btn:hover #uptotop {
+    font-size: 40px;
+    bottom: 400px;
+}
+
+@keyframes totop {
+    0% {
+        opacity: 0;
+        right: -90px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 150px;
+    }
+}
+
+.contactLink :hover {
+    transition: all 300ms ease-in-out;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
+}
+
+#footer {
+    background-color: #2F3C7E;
+}
+
+#footer h5 {
+    color: darkgoldenrod;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
