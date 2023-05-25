@@ -148,6 +148,8 @@ $(document).ready(function () {
             $("body").css("background-color", "whitesmoke");
             $("body h1, body h2,body h3, body h4, body h5").css("color", "black");
             $("#mode_text").css("color", "lightsalmon");
+            $('#profile_image').toggleClass('bg-black');
+            $('#profile_image').toggleClass('bg-dark');
             $("#whoami h1").css("color", "darkgoldenrod");
             $(".project_div a").toggleClass("text-dark");
             $("#contact_card_child").toggleClass("bg-dark");
@@ -166,6 +168,8 @@ $(document).ready(function () {
             $("body").css("background-color", "black");
             $("body h1, body h2,body h3, body h4, body h5").css("color", "silver");
             $("#mode_text").css("color", "cyan");
+            $('#profile_image').toggleClass('bg-black');
+            $('#profile_image').toggleClass('bg-dark');
             $("#whoami h1").css("color", "cyan");
             $(".project_div a").toggleClass("text-dark");
             $(".project_div a").css("color", "silver");
