@@ -2,9 +2,15 @@
 <h3>This is my simple and clean portfolio</h3>
 <img src="./image/readme1.png" alt=""  >
 <br>
-<h3>Features</h3>
+<h1>Features</h1>
 
-<p>Light mode & Dark mode</p>
+<h3>Light mode & Dark mode</h3>
 
 <img src="./image/readme2.png">
 <img src="./image/readme3.png">
+
+<h3>Progress bar</h3>
+<img src="./image/readme4.png">
+
+<h3>Animations</h3>
+<img src="./image/readme5.gif">
