@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="portfolio.css">
+<link rel="stylesheet" type="text/css" href="./portfolio.css">
 </head>
 <body>
 <h1 >My Portfolio Documentation</h1>
