@@ -1,6 +1,10 @@
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="./portfolio.css">
+<style>
+    .test{
+        display:none;
+    }
+</style>
+
+
 </head>
 <body>
 <h1 >My Portfolio Documentation</h1>
@@ -8,5 +12,3 @@
 <img src="./image/readme1.png" alt="" class="test" >
 <br>
 <h3>Features</h3>
-</body>
-</html>
