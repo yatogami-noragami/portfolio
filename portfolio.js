@@ -16,6 +16,24 @@ $(document).ready(function () {
         }, 2000);
     }
 
+    //resume section
+    var resumeState = 0;
+    $('#viewResume').click(function () {
+        if (resumeState == 0) {
+            $("#resume").css("animation", "resumeOpen 500ms ease-in-out forwards normal");
+            this.innerHTML = 'hide resume';
+            $("#viewResume").toggleClass('btn-danger');
+            resumeState = 1;
+        }
+        else {
+            $("#resume").css("animation", "resumeClose 500ms ease-in-out forwards normal");
+            this.innerHTML = 'view resume'
+            $("#viewResume").toggleClass('btn-danger');
+            resumeState = 0;
+        }
+    });
+
+
     $(document).scroll(function () {
 
         // progress bar animation
