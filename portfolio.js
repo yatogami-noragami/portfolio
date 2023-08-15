@@ -6,8 +6,13 @@ $(document).ready(function () {
     var docHeight = $(document).height();
     var winHeight = $(window).height();
     var progressBar = $('#progress-bar');
+    var skillTxt = $('.skillDiv h3')
+    var skillBar = $('.progress')
 
-    $("#alertModal").modal("show");
+
+    skillTxt.fadeOut();
+    skillBar.css('width', 0)
+
 
     //up to top arrow color
     function arrow_color() {
@@ -53,29 +58,8 @@ $(document).ready(function () {
                 $(this).addClass("show");
 
                 if ($('#about_me').hasClass("show")) {
-                    $('#html_progress').removeClass("html_progress_rev");
-                    $('#html_progress').addClass("html_progress");
-
-                    $('#css_progress').removeClass("css_progress_rev");
-                    $('#css_progress').addClass("css_progress");
-
-                    $('#bootstrap_progress').removeClass("bootstrap_progress_rev");
-                    $('#bootstrap_progress').addClass("bootstrap_progress");
-
-                    $('#jquery_progress').removeClass("jquery_progress_rev");
-                    $('#jquery_progress').addClass("jquery_progress");
-
-                    $('#php_progress').removeClass("php_progress_rev");
-                    $('#php_progress').addClass("php_progress");
-
-                    $('#mysql_progress').removeClass("mysql_progress_rev");
-                    $('#mysql_progress').addClass("mysql_progress");
-
-                    $('#laravel_progress').removeClass("laravel_progress_rev");
-                    $('#laravel_progress').addClass("laravel_progress");
-
-                    $('#java_progress').removeClass("java_progress_rev");
-                    $('#java_progress').addClass("java_progress");
+                    skillTxt.fadeIn();
+                    skillBar.css('animation', 'skillBarOut 3s ease-in-out forwards');
                 }
 
                 //up to top arrow show/hide
@@ -87,29 +71,8 @@ $(document).ready(function () {
             } else {
                 $(this).removeClass("show");
                 if ($('#about_me').hasClass("show") == false) {
-                    $('#html_progress').removeClass("html_progress");
-                    $('#html_progress').addClass("html_progress_rev");
-
-                    $('#css_progress').removeClass("css_progress");
-                    $('#css_progress').addClass("css_progress_rev");
-
-                    $('#bootstrap_progress').removeClass("bootstrap_progress");
-                    $('#bootstrap_progress').addClass("bootstrap_progress_rev");
-
-                    $('#jquery_progress').removeClass("jquery_progress");
-                    $('#jquery_progress').addClass("jquery_progress_rev");
-
-                    $('#php_progress').removeClass("php_progress");
-                    $('#php_progress').addClass("php_progress_rev");
-
-                    $('#mysql_progress').removeClass("mysql_progress");
-                    $('#mysql_progress').addClass("mysql_progress_rev");
-
-                    $('#laravel_progress').removeClass("laravel_progress_rev");
-                    $('#laravel_progress').addClass("laravel_progress");
-
-                    $('#java_progress').removeClass("java_progress_rev");
-                    $('#java_progress').addClass("java_progress");
+                    skillTxt.fadeOut();
+                    skillBar.css('animation', 'skillBarIn 1s ease-in-out forwards');
                 }
             }
         });

@@ -2,483 +2,343 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="./portfolio.css" type="text/css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="./portfolio.css" type="text/css">
 
-    <!-- Font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>My Portfolio</title>
+  <title>My Portfolio</title>
 </head>
 
 
 <body class="">
 
-    <div class="" id="bgOverlayParent">
-        <div class="rounded-circle" id="bgOverlayChild">
-            <i class="fa-solid fa-sun light_icon text-light" id="sun"></i>
-            <i class="fa-solid fa-moon dark_icon text-light" id="moon"></i>
-        </div>
+  <div class="" id="bgOverlayParent">
+    <div class="rounded-circle" id="bgOverlayChild">
+      <i class="fa-solid fa-sun light_icon text-light" id="sun"></i>
+      <i class="fa-solid fa-moon dark_icon text-light" id="moon"></i>
     </div>
+  </div>
 
-    <!-- Alert box -->
-    <div class="modal" tabindex="-1" id="alertModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">ALERT</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class=" text-muted">In case of network restriction in certain regions, please use vpn ahead.
-                    </h6>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it</button>
-                </div>
-            </div>
+  <!-- Navbar start -->
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid position-relative">
+      <a class="navbar-brand fs-3  text-light" href="./portfolio.html">Portfolio</a>
+
+      <h4 id="mode_text" class="d-none d-sm-block mode_text_light fs-5 fw-bold ">Light mode</h4>
+
+      <button class="btn light_mode form-switch" id="mode_switch">
+        <i class="fa-solid fa-sun fs-3"></i>
+      </button>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="navbar_btn">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active fw-bold fs-5 navlink_color " id="homeNav" href="#home">Home</a>
+          <a class="nav-link fw-bold fs-5 navlink_color " id="aboutmeNav" href="#about_me">About me</a>
+          <a class="nav-link fw-bold fs-5 navlink_color " id="certificateNav" href="#certificate">Certificate</a>
+          <a class="nav-link fw-bold fs-5 navlink_color " id="projectsNav" href="#projects">Projects</a>
+          <a class="nav-link fw-bold fs-5 navlink_color " id="contactNav" href="#contact">Contact</a>
         </div>
+      </div>
+
+      <div id="progress-bar"></div>
     </div>
+  </nav>
+  <!-- Navbar end -->
 
-    <!-- Navbar start -->
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary ">
-        <div class="container-fluid position-relative">
-            <a class="navbar-brand fs-3  text-light" href="./portfolio.html">Portfolio</a>
+  <!-- Home section start -->
+  <section class=" p-md-0 p-4" id="home">
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-lg-6 border-end border-1 border-dark">
+          <img src="./image/profile_image.png" class="img-fluid rounded-circle mx-auto d-block bg-black" alt="profile_image" id="profile_image">
+        </div>
 
-            <h4 id="mode_text" class="d-none d-sm-block mode_text_light fs-5 fw-bold ">Light mode</h4>
+        <div class="col-lg-6 border-start border-1 border-dark">
+          <div class="d-flex justify-content-center align-items-center h-50">
+            <h1 style="font-family: 'Comfortaa', cursive;">Who am I ?</h1>
+          </div>
+          <div class="text-center" id="whoami">
+            <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">WAI YAN OO</h1>
+            <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">Web developer</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Home section end -->
 
-            <button class="btn light_mode form-switch" id="mode_switch">
-                <i class="fa-solid fa-sun fs-3"></i>
-            </button>
+  <hr>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="navbar_btn">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <!-- About me section start -->
+  <section class=" content_hide p-md-0 p-4" id="about_me">
 
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active fw-bold fs-5 navlink_color " id="homeNav" href="#home">Home</a>
-                    <a class="nav-link fw-bold fs-5 navlink_color " id="aboutmeNav" href="#about_me">About me</a>
-                    <a class="nav-link fw-bold fs-5 navlink_color " id="certificateNav"
-                        href="#certificate">Certificate</a>
-                    <a class="nav-link fw-bold fs-5 navlink_color " id="projectsNav" href="#projects">Projects</a>
-                    <a class="nav-link fw-bold fs-5 navlink_color " id="contactNav" href="#contact">Contact</a>
-                </div>
+    <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">About me</h1>
+    <div class="container">
+
+      <div class="row mt-5">
+
+        <div class="col-lg-6 ">
+          <div class="row  mb-3 border-bottom border-dark border-2">
+            <div class="d-md-flex justify-content-between align-items-center h-100">
+              <h5><mark class=" bg-info rounded">Name</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">Wai Yan Oo</h3>
+            </div>
+          </div>
+
+          <div class="row  mb-3 border-bottom border-dark border-2">
+            <div class="d-md-flex justify-content-between align-items-center h-100">
+              <h5><mark class=" bg-info rounded">Age</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">20</h3>
+            </div>
+          </div>
+
+          <div class="row  mb-3 border-bottom border-dark border-2">
+            <div class="d-md-flex justify-content-between align-items-center h-100">
+              <h5><mark class=" bg-info rounded">Occupation</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">Student</h3>
+            </div>
+          </div>
+
+          <div class="row  mb-3 border-bottom border-dark border-2">
+            <div class="d-md-flex justify-content-between align-items-center h-100">
+              <h5><mark class=" bg-info rounded">Education</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">Highschool graduated</h3>
+            </div>
+          </div>
+
+          <div class="row mb-3 border-bottom border-dark border-2">
+            <div class="d-md-flex justify-content-between align-items-center h-100 mb-3">
+              <h5><mark class=" bg-info rounded">Language profession</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">Burmese native</h3>
             </div>
 
-            <div id="progress-bar"></div>
-        </div>
-    </nav>
-    <!-- Navbar end -->
-
-    <!-- Home section start -->
-    <section class=" p-md-0 p-4" id="home">
-        <div class="container-fluid py-4">
-            <div class="row">
-                <div class="col-lg-6 border-end border-1 border-dark">
-                    <img src="./image/profile_image.png" class="img-fluid rounded-circle mx-auto d-block bg-black"
-                        alt="profile_image" id="profile_image">
-                </div>
-
-                <div class="col-lg-6 border-start border-1 border-dark">
-                    <div class="d-flex justify-content-center align-items-center h-50">
-                        <h1 style="font-family: 'Comfortaa', cursive;">Who am I ?</h1>
-                    </div>
-                    <div class="text-center" id="whoami">
-                        <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">WAI YAN OO</h1>
-                        <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">Web developer</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Home section end -->
-
-    <hr>
-
-    <!-- About me section start -->
-    <section class=" content_hide p-md-0 p-4" id="about_me">
-
-        <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">About me</h1>
-        <div class="container">
-
-            <div class="row mt-5">
-
-                <div class="col-lg-6 ">
-                    <div class="row  mb-3 border-bottom border-dark border-2">
-                        <div class="d-md-flex justify-content-between align-items-center h-100">
-                            <h5><mark class=" bg-info rounded">Name</mark></h5>
-                            <h3 style="font-family: 'Patrick Hand', cursive;">Wai Yan Oo</h3>
-                        </div>
-                    </div>
-
-                    <div class="row  mb-3 border-bottom border-dark border-2">
-                        <div class="d-md-flex justify-content-between align-items-center h-100">
-                            <h5><mark class=" bg-info rounded">Age</mark></h5>
-                            <h3 style="font-family: 'Patrick Hand', cursive;">20</h3>
-                        </div>
-                    </div>
-
-                    <div class="row  mb-3 border-bottom border-dark border-2">
-                        <div class="d-md-flex justify-content-between align-items-center h-100">
-                            <h5><mark class=" bg-info rounded">Occupation</mark></h5>
-                            <h3 style="font-family: 'Patrick Hand', cursive;">Student</h3>
-                        </div>
-                    </div>
-
-                    <div class="row  mb-3 border-bottom border-dark border-2">
-                        <div class="d-md-flex justify-content-between align-items-center h-100">
-                            <h5><mark class=" bg-info rounded">Education</mark></h5>
-                            <h3 style="font-family: 'Patrick Hand', cursive;">Highschool graduated</h3>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3 border-bottom border-dark border-2">
-                        <div class="d-md-flex justify-content-between align-items-center h-100 mb-3">
-                            <h5><mark class=" bg-info rounded">Language profession</mark></h5>
-                            <h3 style="font-family: 'Patrick Hand', cursive;">Burmese native</h3>
-                        </div>
-
-                        <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
-                            <h3 style="font-family: 'Patrick Hand', cursive;">English intermediate</h3>
-                        </div>
-
-                        <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
-                            <h3 style="font-family: 'Patrick Hand', cursive;">Japanese basic</h3>
-                        </div>
-
-                    </div>
-
-                    <div class="row mb-3 border-bottom border-dark border-2">
-                        <div class="d-md-flex justify-content-between align-items-center h-100 mb-3">
-                            <h5><mark class=" bg-info rounded">IT background</mark></h5>
-                            <h3 style="font-family: 'Patrick Hand', cursive;">ITPEC FE level</h3>
-                        </div>
-
-                    </div>
-
-                    <a href="#!" class="btn btn-success mt-5 fw-bold d-block" id="viewResume">view
-                        resume</a>
-
-                    <img src="./Resume.jpg" alt=""
-                        class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
-
-                    <a href="https://drive.google.com/uc?export=download&id=1uzZPJdhn_jOeiPN3l8Di5vz8nk5bQLq7" download
-                        class="btn btn-dark my-5 fw-bold d-block">download resume</a>
-                </div>
-
-                <div class="col-lg-6">
-
-
-                    <div class="row d-flex justify-content-center align-items-center mb-3">
-                        <div class="col-4 col-sm-3">
-                            <div class=" rounded-circle d-flex justify-content-center align-items-center 
-                                            circle_chart" id="html_circle">
-                                <h3>HTML</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-8 col-sm-9 ">
-                            <div class="progress" role="progressbar">
-                                <div class="progress-bar" id="html_progress"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row d-flex justify-content-center align-items-center mb-3">
-                        <div class="col-4 col-sm-3">
-                            <div class=" rounded-circle d-flex justify-content-center align-items-center 
-                                            circle_chart" id="css_circle">
-                                <h3>CSS</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-8 col-sm-9  ">
-                            <div class="progress" role="progressbar">
-                                <div class="progress-bar" id="css_progress"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row d-flex justify-content-center align-items-center mb-3">
-                        <div class="col-4 col-sm-3">
-                            <div class=" rounded-circle d-flex justify-content-center align-items-center 
-                                            circle_chart" id="bootstrap_circle">
-                                <h5>Bootstrap</h5>
-                            </div>
-                        </div>
-
-                        <div class="col-8 col-sm-9  ">
-                            <div class="progress" role="progressbar">
-                                <div class="progress-bar" id="bootstrap_progress"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row d-flex justify-content-center align-items-center mb-3">
-                        <div class="col-4 col-sm-3">
-                            <div class=" rounded-circle d-flex justify-content-center align-items-center 
-                                            circle_chart" id="jquery_circle">
-                                <h4>jQuery</h4>
-                            </div>
-                        </div>
-
-                        <div class="col-8 col-sm-9  ">
-                            <div class="progress" role="progressbar">
-                                <div class="progress-bar" id="jquery_progress"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row d-flex justify-content-center align-items-center mb-3">
-                        <div class="col-4 col-sm-3">
-                            <div class=" rounded-circle d-flex justify-content-center align-items-center 
-                                            circle_chart" id="php_circle">
-                                <h3>PHP</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-8 col-sm-9  ">
-                            <div class="progress" role="progressbar">
-                                <div class="progress-bar" id="php_progress"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row d-flex justify-content-center align-items-center mb-3">
-                        <div class="col-4 col-sm-3">
-                            <div class=" rounded-circle d-flex justify-content-center align-items-center 
-                                                circle_chart" id="mysql_circle">
-                                <h4>MySQL</h4>
-                            </div>
-                        </div>
-
-                        <div class="col-8 col-sm-9  ">
-                            <div class="progress" role="progressbar">
-                                <div class="progress-bar" id="mysql_progress"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row d-flex justify-content-center align-items-center mb-3">
-                        <div class="col-4 col-sm-3">
-                            <div class=" rounded-circle d-flex justify-content-center align-items-center 
-                                            circle_chart" id="laravel_circle">
-                                <h4>Laravel</h4>
-                            </div>
-                        </div>
-
-                        <div class="col-8 col-sm-9  ">
-                            <div class="progress" role="progressbar">
-                                <div class="progress-bar" id="laravel_progress"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row d-flex justify-content-center align-items-center mb-3">
-                        <div class="col-4 col-sm-3">
-                            <div class=" rounded-circle d-flex justify-content-center align-items-center 
-                                                                circle_chart" id="java_circle">
-                                <h3>Java</h3>
-                            </div>
-                        </div>
-
-                        <div class="col-8 col-sm-9 ">
-                            <div class="progress" role="progressbar">
-                                <div class="progress-bar" id="java_progress"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
+              <h3 style="font-family: 'Patrick Hand', cursive;">English intermediate</h3>
             </div>
 
-
-        </div>
-        </div>
-    </section>
-    <!-- About me section end -->
-
-    <hr>
-
-    <!-- Certificate section start -->
-    <section class=" content_hide p-md-0 p-4" id="certificate">
-        <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">Certificate</h1>
-        <div class=" container my-5">
-            <div class=" offset-lg-4 col-lg-4">
-                <img src="./image/fe_certificate.jpg" class=" img-fluid border border-dark rounded shadow-lg ">
-            </div>
-        </div>
-    </section>
-    <!-- Certificate section end -->
-
-
-    <!-- Projects section start -->
-    <section class=" content_hide  p-md-0 p-4" id="projects">
-        <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">Portfolio projects</h1>
-        <div class="container">
-            <div class="row mt-5">
-                <div
-                    class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
-                    <div class="project_div ">
-                        <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank"
-                            class=" text-decoration-none ">
-                            <div class=" border border-2 border-dark border rounded shadow-lg">
-                                <img src="./image/mss.png" alt="" class="project_img border rounded d-block mx-auto">
-                            </div>
-                        </a>
-
-                        <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank"
-                            class=" text-center fw-bold d-block text-dark text-decoration-none">Movie Streaming
-                            Site</a>
-                    </div>
-                </div>
-
-                <div
-                    class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
-                    <div class="project_div ">
-                        <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank"
-                            class=" text-decoration-none ">
-                            <div class=" border border-2 border-dark border rounded  shadow-lg">
-                                <img src="./image/mcs.png" alt="" class="project_img border rounded d-block mx-auto">
-                            </div>
-                        </a>
-                        <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank"
-                            class=" text-center fw-bold d-block text-dark text-decoration-none">My Cinema Site</a>
-                    </div>
-                </div>
-
-                <div
-                    class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
-                    <div class="project_div ">
-                        <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank"
-                            class=" text-decoration-none ">
-                            <div class=" border border-2 border-dark border rounded  shadow-lg">
-                                <img src="./image/ecs.png" alt="" class="project_img border rounded d-block mx-auto">
-                            </div>
-                        </a>
-                        <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank"
-                            class=" text-center fw-bold d-block text-dark text-decoration-none">E Commerce Site</a>
-                    </div>
-                </div>
-
-                <div
-                    class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
-                    <div class="project_div ">
-                        <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank"
-                            class=" text-decoration-none ">
-                            <div class=" border border-2 border-dark border rounded  shadow-lg">
-                                <img src="./image/rsecs.png" alt="" class="project_img border rounded d-block mx-auto">
-                            </div>
-                        </a>
-                        <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank"
-                            class=" text-center fw-bold d-block text-dark text-decoration-none">React Simple E
-                            Commerce</a>
-                    </div>
-                </div>
-
+            <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
+              <h3 style="font-family: 'Patrick Hand', cursive;">Japanese basic</h3>
             </div>
 
-            <div class=" d-flex justify-content-center align-items-center h-100">
-                <button class=" border-0 fs-1">
-                    <i class="fa-brands fa-square-github"></i>
-                </button>
+          </div>
 
-                <a href="https://github.com/yatogami-noragami" class=" fs-5 fw-bold fst-italic"
-                    target="_blank">yatogami-noragami</a>
+          <div class="row mb-3 border-bottom border-dark border-2">
+            <div class="d-md-flex justify-content-between align-items-center h-100 mb-3">
+              <h5><mark class=" bg-info rounded">IT background</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">ITPEC FE level</h3>
             </div>
+
+          </div>
+
+          <a href="#!" class="btn btn-success mt-5 fw-bold d-block" id="viewResume">view
+            resume</a>
+
+          <img src="./Resume.jpg" alt="" class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
+
+          <a href="https://drive.google.com/uc?export=download&id=1uzZPJdhn_jOeiPN3l8Di5vz8nk5bQLq7" download class="btn btn-dark my-5 fw-bold d-block">download resume</a>
         </div>
-    </section>
-    <!-- Projects section end -->
 
-    <hr>
+        <div class="col-lg-6 skillDiv">
+          <h1 class=" text-decoration-underline fw-bold " style="font-family: 'Comfortaa', cursive;">My Skills</h1>
 
-    <!-- Contact section start -->
-    <section class=" content_hide  p-md-0 p-4" id="contact">
-        <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">Contact</h1>
-        <div class="container">
-            <div class="row my-5 px-3">
-                <div class="col-lg-6 offset-lg-3 position-relative d-flex justify-content-center align-items-center 
+          <div class=" my-3">
+            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Bootstrap</h3>
+            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
+              <div class="progress-bar" style="width: 90%;background-color: #563d7c;"></div>
+            </div>
+
+            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">PHP</h3>
+            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
+              <div class="progress-bar" style="width: 75%;background-color: #8993be;"></div>
+            </div>
+
+            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">MySQL</h3>
+            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
+              <div class="progress-bar" style="width: 70%;background-color: #00758F;"></div>
+            </div>
+
+            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Laravel</h3>
+            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
+              <div class="progress-bar" style="width: 60%;background-color: #fb503b;"></div>
+            </div>
+
+            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">React</h3>
+            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
+              <div class="progress-bar" style="width: 50%;background-color: #61DBFB"></div>
+            </div>
+
+            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Node</h3>
+            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
+              <div class="progress-bar" style="width: 50%;background-color: #3c873a"></div>
+            </div>
+
+            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Java</h3>
+            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
+              <div class="progress-bar" style="width: 25%;background-color: #f89820;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+    </div>
+  </section>
+  <!-- About me section end -->
+
+  <hr>
+
+  <!-- Certificate section start -->
+  <section class=" content_hide p-md-0 p-4" id="certificate">
+    <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">Certificate</h1>
+    <div class=" container my-5">
+      <div class=" offset-lg-4 col-lg-4">
+        <img src="./image/fe_certificate.jpg" class=" img-fluid border border-dark rounded shadow-lg ">
+      </div>
+    </div>
+  </section>
+  <!-- Certificate section end -->
+
+
+  <!-- Projects section start -->
+  <section class=" content_hide  p-md-0 p-4" id="projects">
+    <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">Portfolio projects</h1>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
+          <div class="project_div ">
+            <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank" class=" text-decoration-none ">
+              <div class=" border border-2 border-dark border rounded shadow-lg">
+                <img src="./image/mss.png" alt="" class="project_img border rounded d-block mx-auto">
+              </div>
+            </a>
+
+            <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">Movie Streaming
+              Site</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
+          <div class="project_div ">
+            <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank" class=" text-decoration-none ">
+              <div class=" border border-2 border-dark border rounded  shadow-lg">
+                <img src="./image/mcs.png" alt="" class="project_img border rounded d-block mx-auto">
+              </div>
+            </a>
+            <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">My Cinema Site</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
+          <div class="project_div ">
+            <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank" class=" text-decoration-none ">
+              <div class=" border border-2 border-dark border rounded  shadow-lg">
+                <img src="./image/ecs.png" alt="" class="project_img border rounded d-block mx-auto">
+              </div>
+            </a>
+            <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">E Commerce Site</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
+          <div class="project_div ">
+            <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank" class=" text-decoration-none ">
+              <div class=" border border-2 border-dark border rounded  shadow-lg">
+                <img src="./image/rsecs.png" alt="" class="project_img border rounded d-block mx-auto">
+              </div>
+            </a>
+            <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">React Simple E
+              Commerce</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class=" d-flex justify-content-center align-items-center h-100">
+        <button class=" border-0 fs-1">
+          <i class="fa-brands fa-square-github"></i>
+        </button>
+
+        <a href="https://github.com/yatogami-noragami" class=" fs-5 fw-bold fst-italic" target="_blank">yatogami-noragami</a>
+      </div>
+    </div>
+  </section>
+  <!-- Projects section end -->
+
+  <hr>
+
+  <!-- Contact section start -->
+  <section class=" content_hide  p-md-0 p-4" id="contact">
+    <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">Contact</h1>
+    <div class="container">
+      <div class="row my-5 px-3">
+        <div class="col-lg-6 offset-lg-3 position-relative d-flex justify-content-center align-items-center 
                 p-0 overflow-hidden rounded" id="contact_card">
-                    <div class=" bg-light z-3 p-3" id="contact_card_child">
-                        <h4 title="click to call">Phone- <a href="tel:+959795786407"
-                                style="font-family: 'Patrick Hand', cursive;" class=" fs-5">09795786407</a></h4>
+          <div class=" bg-light z-3 p-3" id="contact_card_child">
+            <h4 title="click to call">Phone- <a href="tel:+959795786407" style="font-family: 'Patrick Hand', cursive;" class=" fs-5">09795786407</a></h4>
 
-                        <br>
+            <br>
 
-                        <h4 title="click to send email">Email- <a href="mailto:waiyanooloki@gmail.com"
-                                style="font-family: 'Patrick Hand', cursive;" class=" fs-5">waiyanooloki@gmail.com</a>
-                        </h4>
-                        <br>
+            <h4 title="click to send email">Email- <a href="mailto:waiyanooloki@gmail.com" style="font-family: 'Patrick Hand', cursive;" class=" fs-5">waiyanooloki@gmail.com</a>
+            </h4>
+            <br>
 
-                        <br>
+            <br>
 
-                        <h4>Contact via-
-                            <div class="d-flex justify-content-between">
-                                <a href="https://www.linkedin.com/in/wai-yan-oo-6679b81b7/"
-                                    class="btn fs-3 ms-md-2 contactLink" title="linkedin" target="_blank"><i
-                                        class="fa-brands fa-linkedin "></i></a>
-                                <a href="https://www.facebook.com/soureadthishuh/" class="btn fs-3 ms-md-2 contactLink"
-                                    title="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="https://t.me/https://t.me/FakeeeakF" class="btn fs-3 ms-md-2 contactLink"
-                                    title="telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                            </div>
-                        </h4>
-                    </div>
-                </div>
-            </div>
+            <h4>Contact via-
+              <div class="d-flex justify-content-between">
+                <a href="https://www.linkedin.com/in/wai-yan-oo-6679b81b7/" class="btn fs-3 ms-md-2 contactLink" title="linkedin" target="_blank"><i class="fa-brands fa-linkedin "></i></a>
+                <a href="https://www.facebook.com/soureadthishuh/" class="btn fs-3 ms-md-2 contactLink" title="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://t.me/https://t.me/FakeeeakF" class="btn fs-3 ms-md-2 contactLink" title="telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+              </div>
+            </h4>
+          </div>
         </div>
-    </section>
-    <!-- Contact section end -->
-
-    <hr>
-
-    <!-- Back to top button -->
-    <div class="container" id="totop_div">
-        <div class="row position-relative">
-            <button class=" rounded-circle " id="up_to_top_btn">
-                <i class="fa-solid fa-arrow-up-long" id="uptotop"></i>
-            </button>
-        </div>
+      </div>
     </div>
+  </section>
+  <!-- Contact section end -->
 
-    <!-- Footer -->
-    <div class="container-fluid " id="footer">
-        <div class="row text-center py-3">
-            <h5 class="fw-bold">"Coding with
-                passion"</h5>
-            <h5 class="fw-bold">"Creating with
-                purpose"</h5>
-        </div>
+  <hr>
+
+  <!-- Back to top button -->
+  <div class="container" id="totop_div">
+    <div class="row position-relative">
+      <button class=" rounded-circle " id="up_to_top_btn">
+        <i class="fa-solid fa-arrow-up-long" id="uptotop"></i>
+      </button>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid " id="footer">
+    <div class="row text-center py-3">
+      <h5 class="fw-bold">"Coding with
+        passion"</h5>
+      <h5 class="fw-bold">"Creating with
+        purpose"</h5>
+    </div>
+  </div>
 
 </body>
 <!-- Bootstrap JS -->
-<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 <!-- jQuery cdn -->
-<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 
 <!-- External JS -->
 <script src="./portfolio.js"></script>
