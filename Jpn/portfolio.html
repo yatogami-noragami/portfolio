@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 
 <head>
   <meta charset="UTF-8">
@@ -30,21 +30,21 @@
   <!-- Navbar start -->
   <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary ">
     <div class="container-fluid position-relative">
-      <a class="navbar-brand fs-3  text-light" href="./portfolio.html">Portfolio</a>
+      <a class="navbar-brand fs-3  text-light" href="./portfolio.html">ポートフォリオ</a>
 
       <div class="btn-group" id="langBtn">
         <button class="btn btn-light p-1 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown">
-          English
+          日本語
         </button>
         <div class="dropdown-menu p-0">
-          <a href="#!" class="btn btn-danger fw-bold d-block text-decoration-none text-dark disabled">English</a>
-          <a href="./Jpn/portfolio.html" class="btn btn-info fw-bold d-block text-decoration-none text-dark ">
-            日本語
+          <a href="#!" class="btn btn-danger fw-bold d-block text-decoration-none text-dark disabled">日本語</a>
+          <a href="../portfolio.html" class="btn btn-info fw-bold d-block text-decoration-none text-dark ">
+            English
           </a>
         </div>
       </div>
 
-      <h4 id="mode_text" class="d-none d-sm-block mode_text_light fs-5 fw-bold ">Light mode</h4>
+      <h4 id="mode_text" class="d-none d-sm-block mode_text_light fs-5 fw-bold ">ライトモード</h4>
 
       <button class="btn light_mode form-switch" id="mode_switch">
         <i class="fa-solid fa-sun fs-3"></i>
@@ -56,11 +56,11 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active fw-bold fs-5 navlink_color " id="homeNav" href="#home">Home</a>
-          <a class="nav-link fw-bold fs-5 navlink_color " id="aboutmeNav" href="#about_me">About me</a>
-          <a class="nav-link fw-bold fs-5 navlink_color " id="certificateNav" href="#certificate">Certificate</a>
-          <a class="nav-link fw-bold fs-5 navlink_color " id="projectsNav" href="#projects">Projects</a>
-          <a class="nav-link fw-bold fs-5 navlink_color " id="contactNav" href="#contact">Contact</a>
+          <a class="nav-link active fw-bold fs-5 navlink_color " id="homeNav" href="#home">ホーム</a>
+          <a class="nav-link fw-bold fs-5 navlink_color " id="aboutmeNav" href="#about_me">自己紹介</a>
+          <a class="nav-link fw-bold fs-5 navlink_color " id="certificateNav" href="#certificate">資格証明書</a>
+          <a class="nav-link fw-bold fs-5 navlink_color " id="projectsNav" href="#projects">プロジェクト</a>
+          <a class="nav-link fw-bold fs-5 navlink_color " id="contactNav" href="#contact">接触</a>
         </div>
       </div>
 
@@ -74,16 +74,17 @@
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-lg-6 border-end border-1 border-dark">
-          <img src="./image/profile_image.png" class="img-fluid rounded-circle mx-auto d-block bg-black" alt="profile_image" id="profile_image">
+          <img src="../image/profile_image.png" class="img-fluid rounded-circle mx-auto d-block bg-black" alt="profile_image" id="profile_image">
         </div>
 
         <div class="col-lg-6 border-start border-1 border-dark">
           <div class="d-flex justify-content-center align-items-center h-50">
-            <h1 style="font-family: 'Comfortaa', cursive;">Who am I ?</h1>
+            <h1 style="font-family: 'Comfortaa', cursive;">私 は ?</h1>
           </div>
           <div class="text-center" id="whoami">
             <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">WAI YAN OO</h1>
-            <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">Web developer</h1>
+            <h5 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;" class=" fw-bold">(ワイ・ヤン・ウー)</h5>
+            <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">ウェブ 開発者</h1>
           </div>
         </div>
       </div>
@@ -96,7 +97,7 @@
   <!-- About me section start -->
   <section class=" content_hide p-md-0 p-4" id="about_me">
 
-    <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">About me</h1>
+    <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">自己紹介</h1>
     <div class="container">
 
       <div class="row mt-5">
@@ -104,66 +105,69 @@
         <div class="col-lg-6 ">
           <div class="row  mb-3 border-bottom border-dark border-2">
             <div class="d-md-flex justify-content-between align-items-center h-100">
-              <h5><mark class=" bg-info rounded">Name</mark></h5>
+              <h5><mark class=" bg-info rounded">氏名</mark></h5>
               <h3 style="font-family: 'Patrick Hand', cursive;">Wai Yan Oo</h3>
             </div>
-          </div>
 
-          <div class="row  mb-3 border-bottom border-dark border-2">
-            <div class="d-md-flex justify-content-between align-items-center h-100">
-              <h5><mark class=" bg-info rounded">Age</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">20</h3>
+            <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
+              <h5 style="font-family: 'Patrick Hand', cursive;" class=" fw-bold">(ワイ・ヤン・ウー)</h5>
             </div>
           </div>
 
           <div class="row  mb-3 border-bottom border-dark border-2">
             <div class="d-md-flex justify-content-between align-items-center h-100">
-              <h5><mark class=" bg-info rounded">Occupation</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">Student</h3>
+              <h5><mark class=" bg-info rounded">年齢</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">二十歳</h3>
             </div>
           </div>
 
           <div class="row  mb-3 border-bottom border-dark border-2">
             <div class="d-md-flex justify-content-between align-items-center h-100">
-              <h5><mark class=" bg-info rounded">Education</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">Highschool graduated</h3>
+              <h5><mark class=" bg-info rounded">職業</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">学生</h3>
+            </div>
+          </div>
+
+          <div class="row  mb-3 border-bottom border-dark border-2">
+            <div class="d-md-flex justify-content-between align-items-center h-100">
+              <h5><mark class=" bg-info rounded">学歴</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">高校卒業</h3>
             </div>
           </div>
 
           <div class="row mb-3 border-bottom border-dark border-2">
             <div class="d-md-flex justify-content-between align-items-center h-100 mb-3">
-              <h5><mark class=" bg-info rounded">Language profession</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">Burmese native</h3>
+              <h5><mark class=" bg-info rounded">言語スキル</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">ビルマ語 ネイティブ</h3>
             </div>
 
             <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
-              <h3 style="font-family: 'Patrick Hand', cursive;">English intermediate</h3>
+              <h3 style="font-family: 'Patrick Hand', cursive;">英語 中級</h3>
             </div>
 
             <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
-              <h3 style="font-family: 'Patrick Hand', cursive;">Japanese basic</h3>
+              <h3 style="font-family: 'Patrick Hand', cursive;">日本語 初級</h3>
             </div>
 
           </div>
 
           <div class="row mb-3 border-bottom border-dark border-2">
             <div class="d-md-flex justify-content-between align-items-center h-100 mb-3">
-              <h5><mark class=" bg-info rounded">IT background</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">ITPEC FE level</h3>
+              <h5><mark class=" bg-info rounded">IT バックグラウンド</mark></h5>
+              <h3 style="font-family: 'Patrick Hand', cursive;">ITPEC FE レベル</h3>
             </div>
 
           </div>
 
-          <a href="#!" class="btn btn-success mt-5 fw-bold d-block" id="viewResume">view
-            resume</a>
+          <a href="#!" class="btn btn-success mt-5 fw-bold d-block" id="viewResume">履歴書を閲覧</a>
 
-          <img src="./Resume.jpg" alt="" class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
+          <img src="../Resume.jpg" alt="" class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
 
-          <a href="https://drive.google.com/uc?export=download&id=1uzZPJdhn_jOeiPN3l8Di5vz8nk5bQLq7" download class="btn btn-dark my-5 fw-bold d-block">download resume</a>
+          <a href="https://drive.google.com/uc?export=download&id=1uzZPJdhn_jOeiPN3l8Di5vz8nk5bQLq7" download class="btn btn-dark my-5 fw-bold d-block">履歴書をダウンロード</a>
         </div>
 
         <div class="col-lg-6 skillDiv">
-          <h1 class=" text-decoration-underline fw-bold " style="font-family: 'Comfortaa', cursive;">My Skills</h1>
+          <h1 class=" text-decoration-underline fw-bold " style="font-family: 'Comfortaa', cursive;">スキル</h1>
 
           <div class=" my-3">
             <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Bootstrap</h3>
@@ -215,10 +219,10 @@
 
   <!-- Certificate section start -->
   <section class=" content_hide p-md-0 p-4" id="certificate">
-    <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">Certificate</h1>
+    <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">資格証明書</h1>
     <div class=" container my-5">
       <div class=" offset-lg-4 col-lg-4">
-        <img src="./image/fe_certificate.jpg" class=" img-fluid border border-dark rounded shadow-lg ">
+        <img src="../image/fe_certificate.jpg" class=" img-fluid border border-dark rounded shadow-lg ">
       </div>
     </div>
   </section>
@@ -227,19 +231,18 @@
 
   <!-- Projects section start -->
   <section class=" content_hide  p-md-0 p-4" id="projects">
-    <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">Portfolio projects</h1>
+    <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">プロジェクト</h1>
     <div class="container">
       <div class="row mt-5">
         <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
           <div class="project_div ">
             <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank" class=" text-decoration-none ">
               <div class=" border border-2 border-dark border rounded shadow-lg">
-                <img src="./image/mss.png" alt="" class="project_img border rounded d-block mx-auto">
+                <img src="../image/mss.png" alt="" class="project_img border rounded d-block mx-auto">
               </div>
             </a>
 
-            <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">Movie Streaming
-              Site</a>
+            <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">映画ストリーミングサイト</a>
           </div>
         </div>
 
@@ -247,10 +250,10 @@
           <div class="project_div ">
             <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank" class=" text-decoration-none ">
               <div class=" border border-2 border-dark border rounded  shadow-lg">
-                <img src="./image/mcs.png" alt="" class="project_img border rounded d-block mx-auto">
+                <img src="../image/mcs.png" alt="" class="project_img border rounded d-block mx-auto">
               </div>
             </a>
-            <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">My Cinema Site</a>
+            <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">私のシネマサイト</a>
           </div>
         </div>
 
@@ -258,10 +261,10 @@
           <div class="project_div ">
             <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank" class=" text-decoration-none ">
               <div class=" border border-2 border-dark border rounded  shadow-lg">
-                <img src="./image/ecs.png" alt="" class="project_img border rounded d-block mx-auto">
+                <img src="../image/ecs.png" alt="" class="project_img border rounded d-block mx-auto">
               </div>
             </a>
-            <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">E Commerce Site</a>
+            <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">電子商取引サイト</a>
           </div>
         </div>
 
@@ -269,11 +272,10 @@
           <div class="project_div ">
             <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank" class=" text-decoration-none ">
               <div class=" border border-2 border-dark border rounded  shadow-lg">
-                <img src="./image/rsecs.png" alt="" class="project_img border rounded d-block mx-auto">
+                <img src="../image/rsecs.png" alt="" class="project_img border rounded d-block mx-auto">
               </div>
             </a>
-            <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">React Simple E
-              Commerce</a>
+            <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">React シンプルな電子商取引 </a>
           </div>
         </div>
 
@@ -294,23 +296,23 @@
 
   <!-- Contact section start -->
   <section class=" content_hide  p-md-0 p-4" id="contact">
-    <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">Contact</h1>
+    <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">接触</h1>
     <div class="container">
       <div class="row my-5 px-3">
         <div class="col-lg-6 offset-lg-3 position-relative d-flex justify-content-center align-items-center 
                 p-0 overflow-hidden rounded" id="contact_card">
           <div class=" bg-light z-3 p-3" id="contact_card_child">
-            <h4 title="click to call">Phone- <a href="tel:+959795786407" style="font-family: 'Patrick Hand', cursive;" class=" fs-5">09795786407</a></h4>
+            <h4 title="click to call">電話番号- <a href="tel:+959795786407" style="font-family: 'Patrick Hand', cursive;" class=" fs-5">09795786407</a></h4>
 
             <br>
 
-            <h4 title="click to send email">Email- <a href="mailto:waiyanooloki@gmail.com" style="font-family: 'Patrick Hand', cursive;" class=" fs-5">waiyanooloki@gmail.com</a>
+            <h4 title="click to send email">メール- <a href="mailto:waiyanooloki@gmail.com" style="font-family: 'Patrick Hand', cursive;" class=" fs-5">waiyanooloki@gmail.com</a>
             </h4>
             <br>
 
             <br>
 
-            <h4>Contact via-
+            <h4>ご連絡先-
               <div class="d-flex justify-content-between">
                 <a href="https://www.linkedin.com/in/wai-yan-oo-6679b81b7/" class="btn fs-3 ms-md-2 contactLink" title="linkedin" target="_blank"><i class="fa-brands fa-linkedin "></i></a>
                 <a href="https://www.facebook.com/soureadthishuh/" class="btn fs-3 ms-md-2 contactLink" title="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -338,10 +340,8 @@
   <!-- Footer -->
   <div class="container-fluid " id="footer">
     <div class="row text-center py-3">
-      <h5 class="fw-bold">"Coding with
-        passion"</h5>
-      <h5 class="fw-bold">"Creating with
-        purpose"</h5>
+      <h5 class="fw-bold">"情熱を持ってコードを書く"</h5>
+      <h5 class="fw-bold">"目的を持って創造する"</h5>
     </div>
   </div>
 
