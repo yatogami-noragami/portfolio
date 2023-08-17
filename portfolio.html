@@ -14,6 +14,7 @@
   <!-- Font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
   <title>My Portfolio</title>
 </head>
 
@@ -32,17 +33,24 @@
     <div class="container-fluid position-relative">
       <a class="navbar-brand fs-3  text-light" href="./portfolio.html">Portfolio</a>
 
-      <!-- <div class="btn-group" id="langBtn">
+      <div class="btn-group" id="langBtn">
         <button class="btn btn-light p-1 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown">
           English
         </button>
-        <div class="dropdown-menu p-0">
-          <a href="#!" class="btn btn-danger fw-bold d-block text-decoration-none text-dark disabled">English</a>
-          <a href="./Jpn/portfolio.html" class="btn btn-info fw-bold d-block text-decoration-none text-dark ">
-            日本語
-          </a>
+        <div class="dropdown-menu p-0 bg-transparent">
+          <div class=" d-flex justify-content-center align-items-center bg-secondary disabled rounded">
+            <a href="#!" class="btn fw-bold d-block text-decoration-none text-dark disabled border-0">English
+            </a>
+            <img src="./image/ukFlag.png" class=" langFlag">
+          </div>
+          <div class=" d-flex justify-content-center align-items-center bg-danger rounded">
+            <a href="./Jpn/portfolio.html" class="btn fw-bold d-block text-decoration-none text-light border-0">
+              日本語
+            </a>
+            <img src="./image/jpFlag.png" class=" langFlag">
+          </div>
         </div>
-      </div> -->
+      </div>
 
       <h4 id="mode_text" class="d-none d-sm-block mode_text_light fs-5 fw-bold ">Light mode</h4>
 
@@ -157,7 +165,7 @@
           <a href="#!" class="btn btn-success mt-5 fw-bold d-block" id="viewResume">view
             resume</a>
 
-          <img src="./Resume.jpg" alt="" class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
+          <img src="./image/Resume.jpg" alt="" class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
 
           <a href="https://drive.google.com/uc?export=download&id=1uzZPJdhn_jOeiPN3l8Di5vz8nk5bQLq7" download class="btn btn-dark my-5 fw-bold d-block">download resume</a>
         </div>

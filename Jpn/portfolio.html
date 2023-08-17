@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="./portfolio.css" type="text/css">
+  <link rel="stylesheet" href="../portfolio.css" type="text/css">
 
   <!-- Font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,11 +36,23 @@
         <button class="btn btn-light p-1 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown">
           日本語
         </button>
-        <div class="dropdown-menu p-0">
-          <a href="#!" class="btn btn-danger fw-bold d-block text-decoration-none text-dark disabled">日本語</a>
-          <a href="../portfolio.html" class="btn btn-info fw-bold d-block text-decoration-none text-dark ">
-            English
-          </a>
+
+        <div class="dropdown-menu p-0 bg-transparent">
+          <div class=" d-flex justify-content-center align-items-center bg-secondary disabled rounded">
+            <a href="#!" class="btn fw-bold d-block text-decoration-none text-dark disabled border-0">
+              日本語
+            </a>
+            <img src="../image/jpFlag.png" class=" langFlag">
+          </div>
+
+          <div class=" d-flex justify-content-center align-items-center bg-info rounded">
+            <a href="../portfolio.html" class="btn fw-bold d-block text-decoration-none text-light border-0">
+              English
+            </a>
+            <img src="../image/ukFlag.png" class=" langFlag">
+          </div>
+
+
         </div>
       </div>
 
@@ -161,7 +173,7 @@
 
           <a href="#!" class="btn btn-success mt-5 fw-bold d-block" id="viewResume">履歴書を閲覧</a>
 
-          <img src="../Resume.jpg" alt="" class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
+          <img src="../image/Resume.jpg" alt="" class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
 
           <a href="https://drive.google.com/uc?export=download&id=1uzZPJdhn_jOeiPN3l8Di5vz8nk5bQLq7" download class="btn btn-dark my-5 fw-bold d-block">履歴書をダウンロード</a>
         </div>
@@ -353,6 +365,6 @@
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 
 <!-- External JS -->
-<script src="./portfolio.js"></script>
+<script src="../portfolio.js"></script>
 
 </html>

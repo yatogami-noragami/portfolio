@@ -125,7 +125,6 @@ $(document).ready(function () {
 
         //light mode options
         if ($(this).hasClass("light_mode")) {
-            console.log('light');
             $("body").css("background-color", "whitesmoke");
             $("body h1, body h2,body h3, body h4, body h5").css("color", "black");
             $("#mode_text").css("color", "lightsalmon");
@@ -145,7 +144,6 @@ $(document).ready(function () {
         }
         //dark mode options
         else {
-            console.log('dark');
             $("body").css("background-color", "black");
             $("body h1, body h2,body h3, body h4, body h5").css("color", "silver");
             $("#mode_text").css("color", "cyan");
