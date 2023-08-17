@@ -8,7 +8,7 @@ $(document).ready(function () {
     var progressBar = $('#progress-bar');
     var skillTxt = $('.skillDiv h3')
     var skillBar = $('.progress')
-
+    const lang = document.documentElement.lang;
 
     skillTxt.fadeOut();
     skillBar.css('width', 0)
@@ -26,13 +26,11 @@ $(document).ready(function () {
     $('#viewResume').click(function () {
         if (resumeState == 0) {
             $("#resume").css("animation", "resumeOpen 500ms ease-in-out forwards normal");
-            this.innerHTML = 'hide resume';
             $("#viewResume").toggleClass('btn-danger');
             resumeState = 1;
         }
         else {
             $("#resume").css("animation", "resumeClose 500ms ease-in-out forwards normal");
-            this.innerHTML = 'view resume'
             $("#viewResume").toggleClass('btn-danger');
             resumeState = 0;
         }
@@ -101,6 +99,7 @@ $(document).ready(function () {
         if ($(this).hasClass("light_mode")) {
             $("#mode_text").css("color", "lightsalmon");
             $("#mode_text").html("Light mode");
+            if (lang == 'jp') $("#mode_text").html("ライトモード");
             $('#mode_switch i').toggleClass("fa-sun");
             $('#mode_switch i').toggleClass("fa-moon");
             $('#sun').addClass("light_icon");
@@ -110,6 +109,7 @@ $(document).ready(function () {
         else {
             $("#mode_text").css("color", "cyan");
             $("#mode_text").html("Dark mode");
+            if (lang == 'jp') $("#mode_text").html("ダークモード");
             $('#mode_switch i').toggleClass("fa-sun");
             $('#mode_switch i').toggleClass("fa-moon");
             $('#sun').removeClass("light_icon");
@@ -134,7 +134,7 @@ $(document).ready(function () {
             $(".project_div a").toggleClass("text-dark");
             $("#contact_card_child").toggleClass("bg-dark");
             $("#contact_card_child i").css("color", "black");
-            $("#footer h1").css("color", "darkgoldenrod");
+            $("#footer h5").css("color", "darkgoldenrod");
             $("#uptotop").css("color", "black");
             $("#up_to_top_btn").hover(function () {
                 $("#uptotop").css("color", "lightsalmon");
@@ -154,7 +154,7 @@ $(document).ready(function () {
             $(".project_div a").css("color", "silver");
             $("#contact_card_child").toggleClass("bg-dark");
             $("#contact_card_child i").css("color", "silver");
-            $("#footer h1").css("color", "darkgoldenrod");
+            $("#footer h5").css("color", "silver");
             $("#uptotop").css("color", "black");
             $("#up_to_top_btn").hover(function () {
                 $("#uptotop").css("color", "cyan");
