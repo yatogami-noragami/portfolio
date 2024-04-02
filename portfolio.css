@@ -175,13 +175,13 @@ body {
     }
 
     to {
-        height: 450px;
+        height: 650px;
     }
 }
 
 @keyframes resumeClose {
     from {
-        height: 450px;
+        height: 650px;
     }
 
     to {
