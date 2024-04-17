@@ -100,6 +100,7 @@ $(document).ready(function () {
             $("#mode_text").css("color", "lightsalmon");
             $("#mode_text").html("Light mode");
             if (lang == 'jp') $("#mode_text").html("ライトモード");
+            if (lang == 'cn') $("#mode_text").html("浅色模式");
             $('#mode_switch i').toggleClass("fa-sun");
             $('#mode_switch i').toggleClass("fa-moon");
             $('#sun').addClass("light_icon");
@@ -110,6 +111,7 @@ $(document).ready(function () {
             $("#mode_text").css("color", "cyan");
             $("#mode_text").html("Dark mode");
             if (lang == 'jp') $("#mode_text").html("ダークモード");
+            if (lang == 'cn') $("#mode_text").html("深色模式");
             $('#mode_switch i').toggleClass("fa-sun");
             $('#mode_switch i').toggleClass("fa-moon");
             $('#sun').removeClass("light_icon");
