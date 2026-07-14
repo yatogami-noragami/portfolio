@@ -3,375 +3,337 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>胡 慧 明 (Hu Hui Ming) — Web Developer</title>
+  <meta name="description" content="Hu Hui Ming — Web developer building full-stack and front-end products with Laravel, PHP, React and MySQL.">
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="./portfolio.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="./style.css">
 
-  <!-- Font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-  <title>My Portfolio</title>
 </head>
 
+<body>
 
-<body class="">
+  <div class="progress-line" id="progressLine"></div>
 
-  <div class="" id="bgOverlayParent">
-    <div class="rounded-circle" id="bgOverlayChild">
-      <i class="fa-solid fa-sun light_icon text-light" id="sun"></i>
-      <i class="fa-solid fa-moon dark_icon text-light" id="moon"></i>
-    </div>
-  </div>
+  <header class="site-header">
+    <a href="#home" class="brand">胡 慧 明 <span class="brand-dot">.</span></a>
 
-  <!-- Navbar start -->
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary ">
-    <div class="container-fluid position-relative">
-      <a class="navbar-brand fs-3  text-light" href="./portfolio.html">Portfolio</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+      <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+      <a href="#work" class="nav-link" data-i18n="nav_work">Work</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+    </nav>
 
-      <div class="btn-group" id="langBtn">
-        <button class="btn btn-light p-1 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown">
-          English
+    <div class="header-controls">
+      <!-- Language Switcher stays forced active and layered here -->
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-current" id="langCurrent" type="button" aria-haspopup="true" aria-expanded="false">
+          EN <span class="chevron">▾</span>
         </button>
-        <div class="dropdown-menu p-0 bg-transparent">
-          <div class=" d-flex justify-content-center align-items-center bg-secondary disabled rounded">
-            <a href="#!" class="btn fw-bold d-block text-decoration-none text-dark disabled border-0">English
-            </a>
-            <img src="./image/ukFlag.png" class=" langFlag">
-          </div>
-          <div class=" d-flex justify-content-center align-items-center bg-danger rounded">
-            <a href="./Jpn/portfolio.html" class="btn fw-bold d-block text-decoration-none text-light border-0">
-              日本語
-            </a>
-            <img src="./image/jpFlag.png" class=" langFlag">
-          </div>
-
-          <div class=" d-flex justify-content-center align-items-center bg-light rounded">
-            <a href="./Tw/portfolio.html" class="btn fw-bold d-block text-decoration-none text-danger border-0">
-              中文
-            </a>
-            <img src="./image/twFlag.png" class=" langFlag">
-          </div>
+        <div class="lang-menu" id="langMenu">
+          <a href="#" data-lang="en">English</a>
+          <a href="#" data-lang="jp">日本語</a>
+          <a href="#" data-lang="tw">中文</a>
         </div>
       </div>
 
-      <h4 id="mode_text" class="d-none d-sm-block mode_text_light fs-5 fw-bold ">Light mode</h4>
-
-      <button class="btn light_mode form-switch" id="mode_switch">
-        <i class="fa-solid fa-sun fs-3"></i>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
       </button>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="navbar_btn">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active fw-bold fs-5 navlink_color " id="homeNav" href="#home">Home</a>
-          <a class="nav-link fw-bold fs-5 navlink_color " id="aboutmeNav" href="#about_me">About me</a>
-          <a class="nav-link fw-bold fs-5 navlink_color " id="certificateNav" href="#certificate">Certificate</a>
-          <a class="nav-link fw-bold fs-5 navlink_color " id="projectsNav" href="#projects">Projects</a>
-          <a class="nav-link fw-bold fs-5 navlink_color " id="contactNav" href="#contact">Contact</a>
-        </div>
-      </div>
-
-      <div id="progress-bar"></div>
-    </div>
-  </nav>
-  <!-- Navbar end -->
-
-  <!-- Home section start -->
-  <section class=" p-md-0 p-4" id="home">
-    <div class="container-fluid py-4">
-      <div class="row">
-        <div class="col-lg-6 border-end border-1 border-dark">
-          <img src="./image/profile_image.png" class="img-fluid rounded-circle mx-auto d-block bg-black" alt="profile_image" id="profile_image">
-        </div>
-
-        <div class="col-lg-6 border-start border-1 border-dark">
-          <div class="d-flex justify-content-center align-items-center h-50">
-            <h1 style="font-family: 'Comfortaa', cursive;">Who am I ?</h1>
-          </div>
-          <div class="text-center" id="whoami">
-            <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">WAI YAN OO</h1>
-            <h1 style="font-family: 'Patrick Hand', cursive; color: darkgoldenrod;">Web developer</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Home section end -->
-
-  <hr>
-
-  <!-- About me section start -->
-  <section class=" content_hide p-md-0 p-4" id="about_me">
-
-    <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">About me</h1>
-    <div class="container">
-
-      <div class="row mt-5">
-
-        <div class="col-lg-6 ">
-          <div class="row  mb-3 border-bottom border-dark border-2">
-            <div class="d-md-flex justify-content-between align-items-center h-100">
-              <h5><mark class=" bg-info rounded">Name</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">Wai Yan Oo</h3>
-            </div>
-          </div>
-
-          <div class="row  mb-3 border-bottom border-dark border-2">
-            <div class="d-md-flex justify-content-between align-items-center h-100">
-              <h5><mark class=" bg-info rounded">Age</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">21</h3>
-            </div>
-          </div>
-
-          <div class="row  mb-3 border-bottom border-dark border-2">
-            <div class="d-md-flex justify-content-between align-items-center h-100">
-              <h5><mark class=" bg-info rounded">Occupation</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">Student</h3>
-            </div>
-          </div>
-
-          <div class="row  mb-3 border-bottom border-dark border-2">
-            <div class="d-md-flex justify-content-between align-items-center h-100">
-              <h5><mark class=" bg-info rounded">Education</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">Highschool graduated</h3>
-            </div>
-          </div>
-
-          <div class="row mb-3 border-bottom border-dark border-2">
-            <div class="d-md-flex justify-content-between align-items-center h-100 mb-3">
-              <h5><mark class=" bg-info rounded">Language profession</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">Burmese native</h3>
-            </div>
-
-            <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
-              <h3 style="font-family: 'Patrick Hand', cursive;">English intermediate</h3>
-            </div>
-
-            <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
-              <h3 style="font-family: 'Patrick Hand', cursive;">Japanese basic</h3>
-            </div>
-
-            <div class="d-flex justify-content-md-end align-items-center h-100 mb-3">
-              <h3 style="font-family: 'Patrick Hand', cursive;">Chinese basic</h3>
-            </div>
-
-          </div>
-
-          <div class="row mb-3 border-bottom border-dark border-2">
-            <div class="d-md-flex justify-content-between align-items-center h-100 mb-3">
-              <h5><mark class=" bg-info rounded">IT background</mark></h5>
-              <h3 style="font-family: 'Patrick Hand', cursive;">ITPEC FE level</h3>
-            </div>
-
-          </div>
-
-          <a href="#!" class="btn btn-success mt-5 fw-bold d-block" id="viewResume">
-            Resume</a>
-
-          <img src="./image/Resume.jpg" alt="" class=" w-100 mt-4 border border-dark d-block mx-auto rounded img-fluid" id="resume">
-
-          <a href="https://drive.google.com/file/d/1ZwUa3dwFBB6J4reXDUqu-ZEdRL1oHHgS/view?usp=sharing" target="_blank" download class="btn btn-dark my-5 fw-bold d-block">download resume</a>
-        </div>
-
-        <div class="col-lg-6 skillDiv">
-          <h1 class=" text-decoration-underline fw-bold " style="font-family: 'Comfortaa', cursive;">My Skills</h1>
-
-          <div class=" my-3">
-            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Bootstrap</h3>
-            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
-              <div class="progress-bar" style="width: 90%;background-color: #563d7c;"></div>
-            </div>
-
-            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">PHP</h3>
-            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
-              <div class="progress-bar" style="width: 75%;background-color: #8993be;"></div>
-            </div>
-
-            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">MySQL</h3>
-            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
-              <div class="progress-bar" style="width: 70%;background-color: #00758F;"></div>
-            </div>
-
-            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Laravel</h3>
-            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
-              <div class="progress-bar" style="width: 60%;background-color: #fb503b;"></div>
-            </div>
-
-            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">React</h3>
-            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
-              <div class="progress-bar" style="width: 50%;background-color: #61DBFB"></div>
-            </div>
-
-            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Node</h3>
-            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
-              <div class="progress-bar" style="width: 50%;background-color: #3c873a"></div>
-            </div>
-
-            <h3 class=" fw-bold mt-5" style="font-family: 'Patrick Hand', cursive;">Java</h3>
-            <div class="progress bg-secondary" role="progressbar" style="height: 10px; ">
-              <div class="progress-bar" style="width: 25%;background-color: #f89820;"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-    </div>
-    </div>
-  </section>
-  <!-- About me section end -->
-
-  <hr>
-
-  <!-- Certificate section start -->
-  <section class=" content_hide p-md-0 p-4" id="certificate">
-    <h1 class="text-decoration-underline " style="font-family: 'Comfortaa', cursive;">Certificate</h1>
-    <div class=" container my-5">
-      <div class=" offset-lg-4 col-lg-4">
-        <img src="./image/fe_certificate.jpg" class=" img-fluid border border-dark rounded shadow-lg ">
-      </div>
-    </div>
-  </section>
-  <!-- Certificate section end -->
-
-
-  <!-- Projects section start -->
-  <section class=" content_hide  p-md-0 p-4" id="projects">
-    <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">Portfolio projects</h1>
-    <div class="container">
-      <div class="row mt-5">
-        <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
-          <div class="project_div ">
-            <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank" class=" text-decoration-none ">
-              <div class=" border border-2 border-dark border rounded shadow-lg">
-                <img src="./image/mss.png" alt="" class="project_img border rounded d-block mx-auto">
-              </div>
-            </a>
-
-            <a href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">Movie Streaming
-              Site</a>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
-          <div class="project_div ">
-            <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank" class=" text-decoration-none ">
-              <div class=" border border-2 border-dark border rounded  shadow-lg">
-                <img src="./image/mcs.png" alt="" class="project_img border rounded d-block mx-auto">
-              </div>
-            </a>
-            <a href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">My Cinema Site</a>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
-          <div class="project_div ">
-            <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank" class=" text-decoration-none ">
-              <div class=" border border-2 border-dark border rounded  shadow-lg">
-                <img src="./image/ecs.png" alt="" class="project_img border rounded d-block mx-auto">
-              </div>
-            </a>
-            <a href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">E Commerce Site</a>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6 mb-5 d-flex justify-content-center align-items-center h-100 project_div_parent">
-          <div class="project_div ">
-            <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank" class=" text-decoration-none ">
-              <div class=" border border-2 border-dark border rounded  shadow-lg">
-                <img src="./image/rsecs.png" alt="" class="project_img border rounded d-block mx-auto">
-              </div>
-            </a>
-            <a href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank" class=" text-center fw-bold d-block text-dark text-decoration-none">React Simple E
-              Commerce</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class=" d-flex justify-content-center align-items-center h-100">
-        <button class=" border-0 fs-1">
-          <i class="fa-brands fa-square-github"></i>
-        </button>
-
-        <a href="https://github.com/yatogami-noragami" class=" fs-5 fw-bold fst-italic" target="_blank">yatogami-noragami</a>
-      </div>
-    </div>
-  </section>
-  <!-- Projects section end -->
-
-  <hr>
-
-  <!-- Contact section start -->
-  <section class=" content_hide  p-md-0 p-4" id="contact">
-    <h1 class="text-decoration-underline" style="font-family: 'Comfortaa', cursive;">Contact</h1>
-    <div class="container">
-      <div class="row my-5 px-3">
-        <div class="col-lg-6 offset-lg-3 position-relative d-flex justify-content-center align-items-center 
-                p-0 overflow-hidden rounded" id="contact_card">
-          <div class=" bg-light z-3 p-3" id="contact_card_child">
-            <h4 title="click to call">Phone- <a href="tel:+959795786407" style="font-family: 'Patrick Hand', cursive;" class=" fs-5">+886 979 396 418</a></h4>
-
-            <br>
-
-            <h4 title="click to send email">Email- <a href="mailto:waiyanooloki@gmail.com" style="font-family: 'Patrick Hand', cursive;" class=" fs-5">waiyanooloki@gmail.com</a>
-            </h4>
-            <br>
-
-            <br>
-
-            <h4>Contact via-
-              <div class="d-flex justify-content-between">
-                <a href="https://www.linkedin.com/in/wai-yan-oo-6679b81b7/" class="btn fs-3 ms-md-2 contactLink" title="linkedin" target="_blank"><i class="fa-brands fa-linkedin "></i></a>
-                <a href="https://www.facebook.com/soureadthishuh/" class="btn fs-3 ms-md-2 contactLink" title="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://t.me/https://t.me/FakeeeakF" class="btn fs-3 ms-md-2 contactLink" title="telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-              </div>
-            </h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Contact section end -->
-
-  <hr>
-
-  <!-- Back to top button -->
-  <div class="container" id="totop_div">
-    <div class="row position-relative">
-      <button class=" rounded-circle " id="up_to_top_btn">
-        <i class="fa-solid fa-arrow-up-long" id="uptotop"></i>
+      <button class="nav-burger" id="navBurger" type="button" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
-  </div>
+  </header>
 
-  <!-- Footer -->
-  <div class="container-fluid " id="footer">
-    <div class="row text-center py-3">
-      <h5 class="fw-bold">"Coding with
-        passion"</h5>
-      <h5 class="fw-bold">"Creating with
-        purpose"</h5>
-    </div>
-  </div>
+  <main>
 
+    <!-- HOME -->
+    <section id="home" class="section hero">
+      <div class="hero-inner">
+        <p class="eyebrow reveal" data-i18n="hero_eyebrow">Web developer · New Taipei City, Taiwan</p>
+        <h1 class="hero-title reveal" data-i18n="hero_title">
+          I build reliable<br> web products,<br><em>end to end.</em>
+        </h1>
+        <p class="hero-sub reveal" data-i18n="hero_sub">
+          As a self-taught full-stack engineer, I specialize in building web products from scratch. Over the past few years, I’ve independently owned the entire lifecycle of my projects—handling everything from database design to smooth frontend experiences. I don't just write code; I figure out how to make things work. Though I’m looking for my first formal industry role, my hands-on portfolio proves my dedication and technical foundation. I'm incredibly eager to step into a professional dev team, absorb knowledge, and contribute from day one.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary" data-i18n="btn_view_work">View the work</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="btn_get_touch">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-portrait reveal">
+        <div class="portrait-frame">
+          <img src="./image/profile_image.png" alt="Portrait of Hu Hui Ming" />
+        </div>
+        <p class="portrait-caption" data-i18n="portrait_caption">ITPEC FE certified</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="about_eyebrow">About</p>
+        <h2 class="section-title" data-i18n="about_title">A little about me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-facts reveal">
+          <dl class="fact-list">
+            <div class="fact-row">
+              <dt data-i18n="fact_name">Name</dt>
+              <dd data-i18n="fact_name_val">胡 慧 明 (Hu Hui Ming)</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="fact_age">Age</dt>
+              <dd>23</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="fact_occupation">Occupation</dt>
+              <dd data-i18n="fact_occupation_val">Self-Taught Full-Stack Developer</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="fact_education">Education</dt>
+              <dd data-i18n="fact_education_val">High school graduate</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="fact_it_bg">IT background</dt>
+              <dd data-i18n="fact_it_bg_val">ITPEC FE level</dd>
+            </div>
+          </dl>
+
+          <div class="stamps" aria-label="Languages spoken">
+            <span class="stamp stamp-native" data-i18n="stamp_burmese">BURMESE<br><em>native</em></span>
+            <span class="stamp" data-i18n="stamp_english">ENGLISH<br><em>conversational</em></span>
+            <span class="stamp" data-i18n="stamp_japanese">JAPANESE<br><em>basic</em></span>
+            <span class="stamp" data-i18n="stamp_chinese">CHINESE<br><em>basic</em></span>
+          </div>
+
+          <a href="https://drive.google.com/file/d/11KolAAtWZmdYq6bwfUdw-abq8v-5Hbfj/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-dark resume-btn" data-i18n="btn_resume">
+            Download résumé
+          </a>
+        </div>
+
+        <div class="about-skills reveal">
+          <h3 class="skills-title" data-i18n="skills_title">Stack</h3>
+
+          <div class="stack-group">
+            <p class="stack-group-label" data-i18n="stack_languages">Languages</p>
+            <div class="stack-row">
+              <span class="stack-chip"><i class="devicon-html5-plain colored"></i>HTML5</span>
+              <span class="stack-chip"><i class="devicon-css3-plain colored"></i>CSS3</span>
+              <span class="stack-chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+              <span class="stack-chip"><i class="devicon-php-plain colored"></i>PHP</span>
+              <span class="stack-chip"><i class="devicon-java-plain colored"></i>Java</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <p class="stack-group-label" data-i18n="stack_frameworks">Frameworks &amp; libraries</p>
+            <div class="stack-row">
+              <span class="stack-chip"><i class="devicon-laravel-original colored"></i>Laravel</span>
+              <span class="stack-chip"><i class="devicon-react-original colored"></i>React</span>
+              <span class="stack-chip"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span>
+              <span class="stack-chip"><i class="devicon-jquery-plain colored"></i>jQuery</span>
+              <span class="stack-chip"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <p class="stack-group-label" data-i18n="stack_data">Data</p>
+            <div class="stack-row">
+              <span class="stack-chip"><i class="devicon-mysql-original colored"></i>MySQL</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <p class="stack-group-label" data-i18n="stack_tools">Tools</p>
+            <div class="stack-row">
+              <span class="stack-chip"><i class="devicon-git-plain colored"></i>Git</span>
+              <span class="stack-chip"><i class="devicon-github-original"></i>GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="certificate-card reveal">
+        <img src="./image/fe_certificate.jpg" alt="ITPEC Fundamental Information Technology Engineer certificate">
+        <div class="certificate-copy">
+          <p class="eyebrow" data-i18n="cert_eyebrow">Certificate</p>
+          <p data-i18n="cert_copy">ITPEC Fundamental IT Engineer (FE) — core computing theory, algorithms and systems fundamentals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="work_eyebrow">Work</p>
+        <h2 class="section-title" data-i18n="work_title">Selected projects</h2>
+      </div>
+
+      <div class="work-group reveal">
+        <div class="work-group-head">
+          <h3 data-i18n="work_group_laravel">Laravel full-stack sites</h3>
+          <p class="credentials" data-i18n="work_credentials">Test with — <code>user@gmail.com</code> / <code>admin@gmail.com</code>, password <code>user123</code> / <code>admin123</code></p>
+        </div>
+
+        <div class="project-grid">
+          <a class="project-card" href="https://yokouso.cv" target="_blank" rel="noopener">
+            <div class="project-thumb"><img src="./image/larastream.png" alt="Online streaming site screenshot"></div>
+            <div class="project-meta">
+              <h4>Online Streaming Site</h4>
+              <div class="stack">
+                <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i>
+                <i class="devicon-bootstrap-plain colored"></i><i class="devicon-php-plain colored"></i>
+                <i class="devicon-laravel-original colored"></i><i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-mysql-original colored"></i>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://adminpanel1.yokouso.cv" target="_blank" rel="noopener">
+            <div class="project-thumb"><img src="./image/larapanel.png" alt="Admin panel screenshot"></div>
+            <div class="project-meta">
+              <h4>Admin Panel</h4>
+              <div class="stack">
+                <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i>
+                <i class="devicon-bootstrap-plain colored"></i><i class="devicon-php-plain colored"></i>
+                <i class="devicon-laravel-original colored"></i><i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-mysql-original colored"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-group reveal">
+        <div class="work-group-head">
+          <h3 data-i18n="work_group_static">Static &amp; front-end sites</h3>
+        </div>
+
+        <div class="project-grid">
+          <a class="project-card" href="https://yatogami-noragami.github.io/moviestreamingsite/mss.html" target="_blank" rel="noopener">
+            <div class="project-thumb"><img src="./image/mss.png" alt="Movie streaming site screenshot"></div>
+            <div class="project-meta">
+              <h4>Movie Streaming Site</h4>
+              <div class="stack">
+                <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i>
+                <i class="devicon-bootstrap-plain colored"></i><i class="devicon-javascript-plain colored"></i>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://yatogami-noragami.github.io/mycinemasite/mcs.html" target="_blank" rel="noopener">
+            <div class="project-thumb"><img src="./image/mcs.png" alt="Cinema site screenshot"></div>
+            <div class="project-meta">
+              <h4>My Cinema Site</h4>
+              <div class="stack">
+                <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i>
+                <i class="devicon-bootstrap-plain colored"></i><i class="devicon-javascript-plain colored"></i>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://yatogami-noragami.github.io/ecommercesite/ecs.html" target="_blank" rel="noopener">
+            <div class="project-thumb"><img src="./image/ecs.png" alt="E-commerce site screenshot"></div>
+            <div class="project-meta">
+              <h4>E-Commerce Site</h4>
+              <div class="stack">
+                <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i>
+                <i class="devicon-bootstrap-plain colored"></i><i class="devicon-javascript-plain colored"></i>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://yatogami-noragami.github.io/react_simple_ecommerce/" target="_blank" rel="noopener">
+            <div class="project-thumb"><img src="./image/rsecs.png" alt="React e-commerce site screenshot"></div>
+            <div class="project-meta">
+              <h4>React Simple E-Commerce</h4>
+              <div class="stack">
+                <i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i>
+                <i class="devicon-bootstrap-plain colored"></i><i class="devicon-react-original colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="github-line reveal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.75 2.7 1.25 3.36.95.1-.75.4-1.25.73-1.53-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16v3.2c0 .32.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+        </svg>
+        <a href="https://github.com/yatogami-noragami" target="_blank" rel="noopener">github.com/yatogami-noragami</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="contact_eyebrow">Contact</p>
+        <h2 class="section-title" data-i18n="contact_title">Let's work together</h2>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="contact-row">
+          <span class="contact-label" data-i18n="contact_phone">Phone</span>
+          <a href="tel:+886979396418">+886 979 396 418</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label" data-i18n="contact_email">Email</span>
+          <a href="mailto:waiyanooloki@gmail.com">waiyanooloki@gmail.com</a>
+        </div>
+        <div class="contact-row social-row">
+          <span class="contact-label" data-i18n="contact_elsewhere">Elsewhere</span>
+          <div class="social-links">
+
+            <a href="https://pda.104.com.tw/" target="_blank" rel="noopener" aria-label="104 Job Bank" title="104人力銀行">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/wai-yan-oo-6679b81b7/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.9c0-1.4-.03-3.2-2-3.2-2 0-2.3 1.5-2.3 3.1V21h-4V9Z" />
+              </svg>
+            </a>
+
+            <a href="https://t.me/FakeeeakF" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M21.5 3.5 2.7 10.9c-.9.35-.9.9-.15 1.13l4.8 1.5 1.85 5.66c.22.6.4.84.83.84.34 0 .5-.16.7-.36l1.9-1.85 4 2.95c.75.42 1.28.2 1.47-.68l2.66-12.5c.28-1.1-.4-1.6-1.28-1.19Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <footer class="site-footer">
+    <p data-i18n="footer_text">Coding with passion. Creating with purpose.</p>
+  </footer>
+
+  <script src="./translations.js"></script>
+  <script src="./script.js"></script>
 </body>
-<!-- Bootstrap JS -->
-<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-<!-- jQuery cdn -->
-<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-
-<!-- External JS -->
-<script src="./portfolio.js"></script>
 
 </html>
